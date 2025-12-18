@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Form Vakidation Example</h2>
+        <form onsubmit="return validateForm()">
+            <label>Email:</label>
+            <input type="text" id="email" onkeyup="validateEmail()">
+            <span id= "emailError" style="color:red"></span> </span><br><br>
+            <label>Password (min 6 chars):</label>
+            <input type="password" id="password" onkeyup="validatepassword()">
+            <span id="passwordError" style="color: red;"></span><br><br>
+            <button type="submit">submit</button>
+            </form>
+            <script>
+                function validateEmail() {
+                    let email = document.getElementById("email").value;
+                    let errorSpan = document.getElementById("email".value);
+                    if(!email.includes("@")) {
+                        errorSpan.innerText = "Invalid email!";
+                        return false;
+                    } else {
+                        errorSpan.innerText = "";
+                        return true;
+                    }
+                }
+                function validatepassword() {
+                    let pwd = document.getElementById("password").value;
+                    let errorSpan = document.getElementById("passwordError");
+                    if (pwd.legth < 6) {
+                        errorSpan.innerText = "Password too short!";
+                        return false;
+                    } else {
+                        errorSpan.innerText = "";
+                        return true;
+                    }
+                }
+                function validateForm() {
+                    let isPasswordValid = ValidateEmail();
+                    let isPasswordValid =  validatepassword();
+                    if (isEmailValid && isPasswordValid) {
+                        alert("Form submitted successfully!");
+                        return true;
+                    } else {
+                        alert("Please fix errors before submitting.");
+                        return false;
+                    }
+                    }
+            </script>
+        </button>
+        </form>
+    </body>
+</html>

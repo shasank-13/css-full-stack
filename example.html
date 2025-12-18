@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Website Example</title>
+</head>
+<body>
+    <h2>Dynamic Website Example</h2>
+    <label>Enter your name:</label>
+    <input type="text" id="username">
+    <button onclick="showMessage()">Submit</button>
+    <p id="output"></p>
+    <label>Enter color:</label>
+    <input type="text" id="color">
+    <p id="output"></p>
+    <script>
+        
+            
+    </script>
+     <body>
+    <h2>Dynamic Background Color Change</h2>
+    <button onclick="changecolor()">Change Background Color</button>
+    <script>
+        function changecolor() {
+            let colors = ["lightblue", "lightgreen", "lightyellow","red", "orange"];
+            let randomIndex = Math.floor(Math.random() * colors.length);
+            document.body.style.backgroundColor = colors[randomIndex];
+
+    <script>
+        function showMessage() {
+            var name = document.getElementById("username").value;
+            document.getElementById("output").innerHTML = "Hello " + name  + "! Welcome to our SSS solutions.";
+
+        } 
+
+    </script>
+
+   
+        }
+    </script>
+</body>
+        <style>
+            body{
+                background-color: lightcoral;
+            }
+            h3,p{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Live Clock</h3>
+        <p id="clock"></p>
+        <script>
+            function showTime() {
+                var time = new Date();
+                document.getElementById("clock").innerHTML = time;
+            }
+            setInterval(showTime, 1000);
+        </script>
+    </body>
+
+</body>
+</html>
