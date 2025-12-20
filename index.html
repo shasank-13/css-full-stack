@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Shinchan solutions</title>
+    <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body onload="checkLogin()">
+        <header>
+            <div class="header-container">
+                <h1>Shinchan solutions</h1>
+                <button onclick="logout()" class="logout-button">Logout</button>
+                <nav>
+                    <ul>
+                        <li><a href="#" id="home" onclick="loadpage('home')">Home</a></li>
+                        <li><a href="#" id="about" onclick="loadpage('about')">About</a></li>
+                        <li><a href="#" id="services" onclick="loadpage('services')">Services</a></li>
+                        <li><a href="#" id="contact" onclick="loadpage('contact')">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="content"></section>
+        </main>
+        <footer>
+            <p>@ 2025 Shinchan solutions. All rights reserved.</p>
+        </footer>
+            <script src="script.js"></script>
+
+    </body>
+</html>
